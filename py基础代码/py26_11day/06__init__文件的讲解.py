@@ -7,6 +7,4 @@ Company:湖南零檬信息技术有限公司
 ============================
 """
 
-from py26_11day.pack import test01
-
 print(a)

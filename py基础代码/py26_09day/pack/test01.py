@@ -17,7 +17,6 @@ Company:湖南零檬信息技术有限公司
 # import register
 
 # 从项目目录下，一级一级往下导入
-from py26_09day.pack.pack02 import register03
 
 
 # 可以直接导入python安装路径下的模块（几乎不会使用该方式）

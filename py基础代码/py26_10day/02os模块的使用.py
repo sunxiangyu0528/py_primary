@@ -32,7 +32,7 @@ print("当前文件的路径：", path)
 d1_path = os.path.dirname(path)
 print(d1_path)
 # print(d1_path+"/cases.txt")
-file_path = os.path.join(d1_path,"cases.txt")
+file_path = os.path.join(d1_path, "cases.txt")
 # os模块拼接出来的路径如果出现/和\都有的情况（不用管，可以使用的）
 print(file_path)
 

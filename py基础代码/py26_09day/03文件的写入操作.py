@@ -59,7 +59,7 @@ f = open("bj2.png", "rb")
 # 2、读取内容
 content = f.read()
 # 3、打开复制的新文件
-f2 = open("bj2_copy.png","wb")
+f2 = open("bj2_copy.png", "wb")
 # 4、写入读取出来的内容
 f2.write(content)
 
