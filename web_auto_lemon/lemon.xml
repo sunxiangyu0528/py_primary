@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="测试套件" parallel="tests" thread-count="2">
+    <!-- listeners标签：让监听类生效-->
+    <listeners>
+        <listener class-name="com.lemon.listener.TestFailListenerV2"/>
+        <listener class-name="com.lemon.listener.TestngRetryListener"/>
+    </listeners>
+
+    <!-- 第一个线程的配置：运行chrome-->
+    <test name="线程1">
+        <parameter name="browserType" value="chrome"/>
+        <parameter name="browserVersion" value="70"/>
+        <classes>
+            <class name="com.lemon.testcases.LoginTestV3"/>
+        </classes>
+    </test>
+
+    <!-- 第二个线程的配置：运行firefox-->
+    <test name="线程2">
+        <parameter name="browserType" value="firefox"/>
+        <parameter name="browserVersion" value="80"/>
+        <classes>
+            <class name="com.lemon.testcases.LoginTestV3"/>
+        </classes>
+    </test>
+
+
+</suite>
