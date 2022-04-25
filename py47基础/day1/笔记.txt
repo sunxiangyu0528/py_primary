@@ -1,0 +1,24 @@
+1、https://www.runoob.com/python3/python3-basic-syntax.html
+
+python包：
+ __init__.py
+
+2、pycharm相关设置：
+   https://www.cnblogs.com/Simple-Small/p/12303689.html
+   https://blog.csdn.net/qq_22200671/article/details/108640037
+
+
+pip: 在线安装第三方包、管理第三方包
+第一方：python官方自带的。
+第二方：你自己写的。
+第三方：别人开发出来的功能包。 --- pypi  https://pypi.org/
+      50+
+      安装、升级、卸载
+      pip.exe 在python安装目录下的Scripts目录里面。比如：E:\python39\Scripts
+      1、安装包：pip install 库名
+      2、卸载包：pip uninstall 库名
+      3、升级包：pip install -U 库名
+      4、查看当前pip版本：pip --version
+      5、列出已安装的包：pip list
+      6、生成requirements.txt：pip freeze > requirements.txt
+      7、安装requirements.txt：pip install -r requirements.txt

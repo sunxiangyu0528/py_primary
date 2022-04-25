@@ -1,0 +1,37 @@
+python单元测试框架(代码版测试框架)：
+    unittest
+    pytest
+
+    nose
+    behave
+
+只能做单元测试吗？No
+开发人员自测    开发人员是实现业务功能：开发框架，函数/类   就会存在bug??
+              设计测试数据，调用自己开发的函数功能、类功能。
+              代码版测试框架：写用例、执行用例、看执行结果   编写测试代码
+
+
+自动化测试：代码版测试用例   --- 测试框架
+测试框架必备的功能：
+1、编写用例 - unitest.TestCase、类名Test开头,用例名test_, 断言-self.assertXXXX / assert 表达式
+2、收集用例 - TestLoader(从多个用例文件里面去收集).discover(目录)-文件名以test开头, TestSuite
+3、执行用例、生成测试报告。对比期望与实际结果 - runner运行器。TextTestRunner
+4、查看测试报告
+
+功能测试：设计测试数据、写用例、执行用例、看执行结果
+TestCase - 测试用例
+TestSuite - 测试套件
+TestLoader - 加载用例
+TestRunner -  执行用例   TextTestRunner/HtmlTestRunner/BeautifulReport/unittestreport
+TestResult - 测试结果
+
+
+assert 断言
+AssertionError  断言失败
+
+fixture(夹具)
+前置准备工作、后置清理工作(为了下一次自动化执行时，清理数据。为了不影响下一个用例)
+setup - 每一个用例
+teardown - 每一个用例
+setupClass
+teardwonClass

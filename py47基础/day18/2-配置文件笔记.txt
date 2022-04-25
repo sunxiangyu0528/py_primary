@@ -1,0 +1,77 @@
+"""
+======================
+Author: 柠檬班-小简
+Time: 2022/1/24 19:25
+Project: py47-编码技术
+Company: 湖南零檬信息技术有限公司
+======================
+"""
+.ini配置文件
+ConfigParse类
+# 1、实例化
+conf = ConfigParser()
+# 2、将文件中的数据读取
+conf.read("配置文件路径", encoding="utf-8")
+
+3、读取出来默认是字符串
+conf.get(section名字, option名字)
+
+4、支持读取出来为：bool, int, float
+conf.getboolean(section, option)
+conf.getint(section, option)
+conf.getfloat(section, option)
+
+修改操作(了解一下)：
+1、在已有section下添加 / 修改
+option和value
+conf.set(section, option, value)
+
+2、若要新增section:
+conf.add_section(section名字)
+
+3、将1中的变更写入到配置文件当中。
+conf.write(open(文件,“w”, encoding =”utf - 8”))
+
+
+yaml配置文件
+YAML 是一种简洁的非标记语言。
+YAML以数据为中心，使用空白，缩进，分行组织数据，从而使得表示更加简洁易
+
+
+基本规则：
+1、大小写敏感
+2、使用缩进表示层级关系  -
+3、禁止使用tab缩进，只能使用空格键
+4、缩进长度没有限制，只要元素对齐就表示这些元素属于一个层级。
+5、使用#表示注释
+6、字符串可以不用引号标注
+
+
+1、字典
+使用冒号（：）表示键值对，同一缩进的所有键值对属于一个map
+#Yaml  方式一（注意冒号后的空格）
+platformName: Android
+platformVersion: 5.1
+
+2、列表
+使用连字符（-）表示，注意-后的空格
+- hello
+- world
+
+3、scalar，纯量
+      字符串、数字、布尔值。不可变数据类型。
+
+
+py读取yaml文件：
+1、第三方库：pyyaml模块
+2、安装：pip install pyyaml
+
+3、从yaml文件读取数据只有3步：
+     3.0  引入yaml: import yaml
+      3.1  打开yaml文件: open函数
+      3.2  调用yaml.load加载文件对象，为python对象。
+
+    示例：
+    fs = open(yaml文件路径,encoding="utf-8")
+    s = yaml.load(fs,yaml.FullLoader)
+
