@@ -16,9 +16,9 @@ from decimal import Decimal
 # print(t2-t)
 
 # 错误用法
-# d1 = Decimal(9.3)
-# d2 = Decimal(1.1)
-# print(d1 - d2)
+d1 = Decimal(9.3)
+d2 = Decimal(1.1)
+print(d1 - d2)
 
 # 正确的用法
 d22 = Decimal("9.3")

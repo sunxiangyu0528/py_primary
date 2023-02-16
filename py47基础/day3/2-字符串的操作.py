@@ -45,3 +45,8 @@ print(ss1.startswith(" "))
 sss = "http://www.baidu.com"
 print(sss.startswith("http://"))
 sss.endswith(".com")
+
+
+ss = "123456"
+ss1=ss.join("abcde")
+print(ss1)
